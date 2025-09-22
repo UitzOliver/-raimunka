@@ -15,23 +15,23 @@ def divide(x, y):
     return x / y
 
 
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
+print("Válaszd ki a mûveletet")
+print("1.Összeadás")
+print("2.Kivonás")
+print("3.Szorzás")
+print("4.Osztás")
 
 while True:
     # take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
+    choice = input("Válassz egy opciót(1/2/3/4): ")
 
     # check if choice is one of the four options
     if choice in ('1', '2', '3', '4'):
         try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
+            num1 = float(input("Add meg az elsõ számot: "))
+            num2 = float(input("Add meg a második számot: "))
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print("Hibás kód. Adj meg egy számot.")
             continue
 
         if choice == '1':
@@ -48,8 +48,8 @@ while True:
         
         # check if user wants another calculation
         # break the while loop if answer is no
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        if next_calculation == "no":
+        next_calculation = input("Csináljunk még egy számolást? (igen/nem): ")
+        if next_calculation == "nem":
           break
     else:
-        print("Invalid Input")
+        print("Hibás kód")
